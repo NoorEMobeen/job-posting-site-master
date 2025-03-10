@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# 🏢 Job Posting Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![PHP](https://img.shields.io/badge/PHP-7.4-blue.svg)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange.svg)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-Framework-purple.svg)
+![License](https://img.shields.io/github/license/NoorEMobeen/job-posting-site-master)
 
-## Available Scripts
+## 📌 Overview
 
-In the project directory, you can run:
+**Job Posting Site** is a web-based job portal designed to connect **job seekers** with **employers**. It allows recruiters to **post job listings**, while candidates can **apply for jobs** and manage their applications. The platform is built using **PHP, MySQL, and Bootstrap**, ensuring a **responsive, user-friendly experience**.
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🏢 **Employer Dashboard**: Post and manage job listings.
+- 👩‍💻 **Job Seeker Portal**: Browse and apply for jobs.
+- 📂 **Resume Upload**: Candidates can submit resumes for job applications.
+- 🔎 **Search & Filter**: Find jobs based on categories, locations, and keywords.
+- 📧 **Email Notifications**: Automated emails for job postings and applications.
+- 🎨 **Responsive UI**: Optimized for both desktop and mobile using Bootstrap.
+- 🔑 **User Authentication**: Secure **login & registration** for both recruiters and applicants.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- **Backend**: PHP (Core PHP / Laravel if applicable)
+- **Database**: MySQL
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript
+- **Authentication**: PHP Sessions / JWT (mention if used)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup
 
-### `npm run build`
+To set up and run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1️⃣ Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure you have the following installed:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **XAMPP / WAMP** (For PHP and MySQL)
+- **PHP 7.4+**
+- **MySQL**
+- **Apache Server**
 
-### `npm run eject`
+### 2️⃣ Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git clone https://github.com/NoorEMobeen/job-posting-site-master.git
+cd job-posting-site-master
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3️⃣ Set Up Database
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Open **phpMyAdmin**.
+2. Create a new database (e.g., `job_portal`).
+3. Import the database file (`database.sql` if included) from the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4️⃣ Configure Database Connection
 
-## Learn More
+Modify the **database configuration** in `config.php` (or `.env` if using Laravel):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "job_portal";
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5️⃣ Start the Server
 
-### Code Splitting
+If using **XAMPP**, move the project to `htdocs` and start **Apache & MySQL**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Then, open your browser and go to:
 
-### Analyzing the Bundle Size
+```sh
+http://localhost/job-posting-site-master/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📂 Project Structure
 
-### Making a Progressive Web App
+```
+job-posting-site-master/
+│── assets/              # CSS, JS, images, and Bootstrap files
+│── config.php           # Database connection file
+│── index.php            # Homepage
+│── employer/            # Employer dashboard & job posting features
+│── jobseeker/           # Job seeker profile & application management
+│── includes/            # Common reusable PHP files
+│── database.sql         # MySQL database dump (if provided)
+│── README.md            # Project documentation
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎯 Usage Guide
 
-### Advanced Configuration
+### 🔹 Employer (Recruiter)
+1. Sign up as an **Employer**.
+2. Post a **new job listing** with details.
+3. Manage **applications** from job seekers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🔹 Job Seeker
+1. Register and create a **profile**.
+2. Browse **available jobs**.
+3. Apply for jobs with an uploaded **resume**.
 
-### Deployment
+## 🛠 Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you face any issues:
 
-### `npm run build` fails to minify
+- Ensure **Apache & MySQL** are running.
+- Verify **database connection** settings in `config.php`.
+- If login errors occur, **clear browser cookies** or check session settings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. **Fork** this repository.
+2. **Clone** your forked repo.
+3. Create a **new branch** (`feature-branch`).
+4. Commit your changes.
+5. Push the branch and create a **Pull Request**.
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [`LICENSE`](LICENSE) file for details.
+
+## 📧 Contact
+
+For any queries or discussions:
+
+- **Email**: noormobeen123@gmail.com  
+- **GitHub**: [NoorEMobeen](https://github.com/NoorEMobeen)
